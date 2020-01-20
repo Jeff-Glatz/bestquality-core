@@ -9,10 +9,10 @@
         <version>0.0.2</version>
     </parent>
 
-    <artifactId>bestquality-core</artifactId>
+    <artifactId>java-core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>BestQuality Core Library</name>
-    <description>BestQuality Core Library</description>
+    <name>Core Library</name>
+    <description>Core Library</description>
 
     <properties>
         <project.staging.profile>20cdf4093a44de</project.staging.profile>

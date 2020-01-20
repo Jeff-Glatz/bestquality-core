@@ -16,15 +16,15 @@ cache:
 # Prerequisites
 before_install:
   # Setup maven settings-security.xml for nexus staging
-  - openssl aes-256-cbc -K $encrypted_XXXXXXXXXX_key -iv $encrypted_XXXXXXXXXX_iv
+  - openssl aes-256-cbc -K $encrypted_3e38da91b201_key -iv $encrypted_3e38da91b201_iv
     -in deploy/settings-security.xml.enc -out ~/.m2/settings-security.xml -d
   # Setup the code signing key; it will be used to publish snapshots and releases
-  - openssl aes-256-cbc -K $encrypted_XXXXXXXXXX_key -iv $encrypted_XXXXXXXXXX_iv
+  - openssl aes-256-cbc -K $encrypted_3e38da91b201_key -iv $encrypted_3e38da91b201_iv
     -in deploy/code-signing-key.asc.enc -out /tmp/code-signing-key.asc -d
   - gpg --batch --no-default-keyring --allow-secret-key-import --import /tmp/code-signing-key.asc
   - rm /tmp/code-signing-key.asc
   # Setup the github deploy key as the default SSH key
-  - openssl aes-256-cbc -K $encrypted_XXXXXXXXXX_key -iv $encrypted_XXXXXXXXXX_iv
+  - openssl aes-256-cbc -K $encrypted_3e38da91b201_key -iv $encrypted_3e38da91b201_iv
     -in deploy/id_rsa.enc -out ~/.ssh/id_rsa -d
   - chmod 400 ~/.ssh/id_rsa
 

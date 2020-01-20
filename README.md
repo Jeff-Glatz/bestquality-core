@@ -9,7 +9,7 @@ Project description
 ```xml
 <dependency>
   <groupId>io.bestquality</groupId>
-  <artifactId>java-core</artifactId>
+  <artifactId>bestquality-core</artifactId>
   <version>0.0.0</version>
 </dependency>
 ```

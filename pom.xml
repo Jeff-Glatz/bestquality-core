@@ -9,7 +9,7 @@
         <version>0.0.2</version>
     </parent>
 
-    <artifactId>java-core</artifactId>
+    <artifactId>bestquality-core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Core Library</name>
     <description>Core Library</description>

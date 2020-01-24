@@ -2,6 +2,8 @@ package io.bestquality.lang;
 
 import org.junit.Test;
 
+import static io.bestquality.lang.CheckedFunction.adapting;
+import static io.bestquality.lang.CheckedFunction.identity;
 import static java.lang.String.valueOf;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -68,5 +70,23 @@ public class CheckedFunctionTest {
 
         function.asFunction()
                 .apply("Hello World");
+    }
+
+    @Test
+    public void shouldAdaptFunction() {
+        CheckedFunction<String, Boolean> function = adapting(Boolean::parseBoolean);
+
+        assertThat(function.asFunction()
+                .apply("True"))
+                .isTrue();
+    }
+
+    @Test
+    public void shouldReturnSelf() {
+        CheckedFunction<String, String> function = identity();
+
+        assertThat(function.asFunction()
+                .apply("True"))
+                .isSameAs("True");
     }
 }

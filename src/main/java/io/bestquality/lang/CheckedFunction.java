@@ -30,4 +30,12 @@ public interface CheckedFunction<T, R> {
         requireNonNull(after);
         return (T t) -> after.apply(apply(t));
     }
+
+    static <T> CheckedFunction<T, T> identity() {
+        return t -> t;
+    }
+
+    static <T,R> CheckedFunction<T, R> adapting(Function<T, R> function) {
+        return function::apply;
+    }
 }

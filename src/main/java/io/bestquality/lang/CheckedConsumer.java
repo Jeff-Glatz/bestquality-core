@@ -6,8 +6,7 @@ import static java.util.Objects.requireNonNull;
 
 @FunctionalInterface
 public interface CheckedConsumer<T> {
-    void accept(T value)
-            throws Exception;
+    void accept(T value) throws Exception;
 
     default Consumer<T> asConsumer() {
         return (T t) -> {

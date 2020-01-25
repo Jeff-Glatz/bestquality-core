@@ -6,8 +6,7 @@ import static java.util.Objects.requireNonNull;
 
 @FunctionalInterface
 public interface CheckedFunction<T, R> {
-    R apply(T value)
-            throws Exception;
+    R apply(T value) throws Exception;
 
     default Function<T, R> asFunction() {
         return value -> {

@@ -23,11 +23,19 @@ public class MapBuilder<K, V> {
         return map;
     }
 
-    public static <K, V> MapBuilder<K, V> newMap(Class<K> key, Class<V> value) {
+    public static <K, V> MapBuilder<K, V> mapOf(Class<K> key, Class<V> value) {
         return new MapBuilder<>();
     }
 
-    public static <K, V> MapBuilder<K, V> newMap(Map<K, V> map) {
+    public static <K, V> MapBuilder<K, V> mapOf(Map<K, V> map) {
         return new MapBuilder<>(map);
+    }
+
+    public static <K, V> MapBuilder<K, V> newMap(Class<K> key, Class<V> value) {
+        return mapOf(key, value);
+    }
+
+    public static <K, V> MapBuilder<K, V> newMap(Map<K, V> map) {
+        return mapOf(map);
     }
 }

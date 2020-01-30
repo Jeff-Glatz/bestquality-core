@@ -10,6 +10,6 @@ Project description
 <dependency>
   <groupId>io.bestquality</groupId>
   <artifactId>bestquality-core</artifactId>
-  <version>0.0.5</version>
+  <version>0.0.6</version>
 </dependency>
 ```

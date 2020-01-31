@@ -12,7 +12,7 @@ public interface CheckedConsumer<T> {
         return (T t) -> {
             try {
                 accept(t);
-            } catch (RuntimeException e) {
+            } catch (Error | RuntimeException e) {
                 throw e;
             } catch (Exception e) {
                 throw new RuntimeException(e);

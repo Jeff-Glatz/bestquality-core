@@ -12,7 +12,7 @@ public interface CheckedFunction<T, R> {
         return value -> {
             try {
                 return apply(value);
-            } catch (RuntimeException e) {
+            } catch (Error | RuntimeException e) {
                 throw e;
             } catch (Exception e) {
                 throw new RuntimeException(e);
@@ -34,7 +34,7 @@ public interface CheckedFunction<T, R> {
         return t -> t;
     }
 
-    static <T,R> CheckedFunction<T, R> adapting(Function<T, R> function) {
+    static <T, R> CheckedFunction<T, R> adapting(Function<T, R> function) {
         return function::apply;
     }
 }

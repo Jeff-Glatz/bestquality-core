@@ -8,7 +8,7 @@ public interface CheckedRunnable {
         return () -> {
             try {
                 run();
-            } catch (RuntimeException e) {
+            } catch (Error | RuntimeException e) {
                 throw e;
             } catch (Exception e) {
                 throw new RuntimeException(e);

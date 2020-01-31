@@ -4,6 +4,9 @@ import static java.lang.Thread.currentThread;
 
 public class Classes {
 
+    private Classes() {
+    }
+
     public static ClassLoader loaderOf(Class<?> caller) {
         ClassLoader loader = currentThread()
                 .getContextClassLoader();
